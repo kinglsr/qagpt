@@ -94,7 +94,7 @@ export async function POST(req: Request) {
         } else {
           try {
             // generate a random number between 0 and 1
-            const modelGPT = Math.random() < 0.8 ? "gpt-3.5-turbo" : "gpt-4";
+            const modelGPT = Math.random() < 0.8 ? "gpt-4.1" : "gpt-4.1";
             console.log("modelGPT", modelGPT);
             const response = await openai.chat.completions.create({
               model: `${modelGPT}`,
